@@ -53,7 +53,7 @@ function deepClone(obj = {}) {
   }
 
   for (let key in obj) {
-    //保证key不是原型的是属性
+    //保证key不是原型的属性
     if (obj.hasOwnProperty(key)) {
       //递归调用
       result[key] = deepClone(obj[key]) //有深层对象的时候特有用
