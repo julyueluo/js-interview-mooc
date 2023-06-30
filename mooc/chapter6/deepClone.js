@@ -63,3 +63,6 @@ function deepClone(obj = {}) {
   //返回结果
   return result
 }
+let a={red:'red' }
+let b=deepClone(a)
+console.log(a,b);
