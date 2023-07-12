@@ -1,14 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>圣杯布局</title>
+  <style type="text/css">  
+  body{
+    min-width: 550px;
+  }
+  #header{
+    text-align:center;
+    background-color:#f1f1f1;
+  }
+  #center {
+    text-align: center;
+    background-color: #ccc;
+    width: 100%;
+  }
+  #container {
+    padding-left: 200px;
+    padding-right: 150px;
+  }
+  #container .column{
+    float: left;
+  }
+  #left{
+    position:relative;
+    background-color: yellow;
+    width: 200px;
+    margin-left: -100%;
+    right: 200px;
+  }
+  #right {
+    background-color: red;
+    width: 150px;
+    /* margin-right:-100%;  */
+    margin-right: -150px;
+  }
+  #footer {
+    clear:both;
+    text-align:center;
+    background-color: #f1f1f1;
+  }
+
+  </style>
 </head>
 <body>
-  <p>三栏布局，中间一栏最先加载和渲染（内容最重要）</p>
+  <!-- <p>目的:使三栏布局，中间一栏最先加载和渲染（内容最重要）</p>
   <p>两侧内容固定，中间内容随宽度自适应</p>
   <p>一般用于PC网页</p>
-  
+  <ul>圣杯和双飞翼技术总结
+    <li>使用float布局</li>
+    <li>两侧margin负值，一遍和中间内容横向重叠</li>
+    <li>防止中将内容被两侧覆盖，一个用padding,一个用margin</li>
+  </ul> -->
+  <div id="header">this is header</div>
+  <div id="container">
+    <div id="center" class="column">this is center</div>
+    <div id="left" class="column">this is left</div>
+    <div id="right" class="column">this is right</div>
+  </div>
+  <div id="footer">this is footer</div>
+
+
 </body>
 </html>
