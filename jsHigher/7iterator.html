@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>迭代生成</title>
+</head>
+<body>
+  <script>
+    
+let str = 'abc'
+let arr2 = ['a','b','c']
+let map = new Map().set('a',1).set('b',2).set('c',3)
+let set2 = new Set().add('a').add('b').add('c')
+let els = document.querySelectorAll('div')
+
+console.log(str[Symbol.iterator]);
+console.log(arr2[Symbol.iterator]);
+console.log(map[Symbol.iterator]);
+console.log(set2[Symbol.iterator]);
+console.log(els[Symbol.iterator]);
+
+console.log(str[Symbol.iterator]());
+console.log(arr2[Symbol.iterator]());
+console.log(map[Symbol.iterator]());
+console.log(set2[Symbol.iterator]());
+console.log(els[Symbol.iterator]());
+
+
+  </script>
+</body>
+</html>
